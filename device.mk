@@ -21,11 +21,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     bootctrl.volcano
 
-PRODUCT_STATIC_BOOT_CONTROL_HAL := \
-    bootctrl.volcano \
-    libgptutils \
-    libz \
-    libcutils
+PRODUCT_PACKAGES += \
+    android.hardware.boot@1.1-impl-qti \
+    android.hardware.boot@1.1-impl-qti.recovery \
+    android.hardware.boot@1.1-service
+
+PRODUCT_PACKAGES_DEBUG += \
+    bootctl
 
 PRODUCT_PACKAGES += \
     otapreopt_script \
