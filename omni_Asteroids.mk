@@ -27,3 +27,12 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="Asteroids-user 14 UKQ1.241011.001 2503021856 release-keys"
 
 BUILD_FINGERPRINT := Nothing/Asteroids/Asteroids:14/UKQ1.241011.001/2503021856:user/release-keys
+
+# Forcefully add mtp support
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    persist.sys.usb.config=mtp
+
+# A/B device flags
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    TARGET_DEVICE=Asteroids \
+    TARGET_PRODUCT=Asteroids
